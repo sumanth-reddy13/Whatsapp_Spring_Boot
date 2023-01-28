@@ -24,4 +24,13 @@ public class Group {
     public int getNumberOfParticipants() {
         return this.numberOfParticipants;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || this.getClass() != obj.getClass()) return false;
+        Group group = (Group) obj;
+
+        return this.getName().equals(group.getName()) && this.getNumberOfParticipants() == group.getNumberOfParticipants();
+    }
 }

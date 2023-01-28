@@ -5,12 +5,12 @@ import java.util.Date;
 public class Message {
     private int id;
     private String content;
-    private String timestamp;
+    private Date timestamp;
 
-    public Message(int id, String content, String timestamp) {
+    public Message(int id, String content) {
         this.id = id;
         this.content = content;
-        this.timestamp = timestamp;
+        this.timestamp = new Date();
     }
 
     public void setId(int id) {
@@ -21,9 +21,9 @@ public class Message {
         this.content = content;
     }
 
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-    }
+//    public void setTimestamp(String timestamp) {
+//        this.timestamp = timestamp;
+//    }
 
     public String getContent() {
         return this.content;
@@ -33,7 +33,7 @@ public class Message {
         return this.id;
     }
 
-    public String  getTimestamp() {
+    public Date etTimestamp() {
         return this.timestamp;
     }
 }
